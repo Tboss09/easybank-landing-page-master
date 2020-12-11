@@ -1,4 +1,5 @@
   @import"./reset";
+  @import"./variables";
 
   html {
       font-size: 18px;
@@ -6,4 +7,118 @@
 
   body {
       font-family: 'Public Sans', sans-serif;
+      position: relative;
+  }
+
+  //   function 
+  @function weight($weightName) {
+      @return map-get($weight, $weightName);
+  }
+
+
+  //   Header
+
+  .header {
+      @include flex(center, space-around);
+      background: lightgrey;
+      height: 10vh;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      z-index: 99999;
+
+      &__menu {
+          .icon {
+              font-size: 40px;
+              font-weight: lighter !important;
+          }
+      }
+
+      &__nav {
+          &--links {
+              display: none;
+          }
+      }
+
+      &__btn {
+          display: none;
+      }
+  }
+
+  //   Main
+  .main {
+
+      &__article {
+
+          z-index: -1000;
+          position: relative;
+
+
+          &--img:nth-of-type(1) {
+
+              @include flex(flex-end, center); //   transform: translateY(-17vh);
+              background: url('../images/bg-intro-mobile.svg');
+              background-repeat: no-repeat;
+              background-position: center bottom;
+              background-size: cover;
+              transform: translateY(-15vh);
+
+              img {
+                  width: 95%;
+                  transform: translateY(-6vh);
+              }
+          }
+
+          &--text {
+              margin-top: -22vh;
+              text-align: center;
+
+              h1 {
+                  font-weight: weight("light");
+                  text-overflow: ellipsis;
+              }
+
+              p {
+                  font-size: 15px;
+                  max-width: 90%;
+                  margin: auto;
+                  line-height: 25px;
+              }
+          }
+
+          &--btn {
+              @include flex(center, center);
+              margin: 5vh 0px 6vh 0px;
+
+              button {
+                  font-family: inherit;
+                  font-size: inherit;
+                  padding: 15px 40px;
+                  border-radius: 50px;
+                  font-size: 14px;
+                  border: none;
+                  text-align: center;
+                  display: inline-block;
+              }
+          }
+
+          &:nth-child(2) {
+              margin: 8vh auto;
+              background: lightblue;
+              max-width: 100%;
+
+              header {
+                  margin: 0 auto;
+                  text-align: center;
+
+                  h2 {
+                      font-size: 1rem;
+                      font-weight: weight("med");
+                  }
+
+                  p {
+                      text-overflow: ellipsis;
+                  }
+              }
+          }
+      }
   }

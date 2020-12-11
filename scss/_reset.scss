@@ -247,6 +247,8 @@ audio:not([controls]) {
 
 img {
     border-style: none;
+    max-width: 100%;
+    height: auto;
 }
 
 /**
@@ -385,6 +387,13 @@ progress {
 /**
    * Remove the default vertical scrollbar in IE.
    */
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
 
 textarea {
     overflow: auto;

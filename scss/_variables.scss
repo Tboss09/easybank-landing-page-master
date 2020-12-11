@@ -6,7 +6,7 @@ $color :("gray":hsl(233, 8%, 62%), "lightGray": hsl(220, 16%, 96%), "lighterGray
 $weight:("light":300, "med":400, "bold":700);
 
 
-@mixin flex ($justify, $align) {
+@mixin flex ($align, $justify) {
     display: flex;
     align-items: $align;
     justify-content: $justify;
