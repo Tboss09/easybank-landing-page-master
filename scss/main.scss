@@ -221,6 +221,7 @@
   //   Footer
 
   .footer {
+      margin-top: 15vh;
       padding: 5vh;
       display: grid;
       place-items: center;
@@ -238,11 +239,31 @@
 
           li {
               text-align: center;
-              padding: 1vh;
+              padding: 2vh;
 
-              &--link {
-                  padding: 2vh;
-              } 
           }
+
+          &--link {
+              font-weight: weight("med");
+              padding: 2vh;
+          }
+      }
+
+      &__btn {
+          margin: 6vh;
+
+          .button {
+              padding: 15px 40px;
+              border-radius: 50px;
+              font-size: 14px;
+              text-align: center;
+              background: lightblue;
+          }
+      }
+
+      p {
+          font-size: 14px;
+          font-weight: weight("light");
+          padding: 2vh;
       }
   }
