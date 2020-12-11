@@ -10,6 +10,23 @@
       position: relative;
   }
 
+  .body__Overlay {
+      position: absolute;
+      top: 0;
+      background: rgba(0, 0, 0, 0.281);
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: 999;
+      opacity: 0;
+      display: none;
+
+      &.active {
+          display: block;
+          opacity: 1;
+      }
+  }
+
   //   function 
   @function weight($weightName) {
       @return map-get($weight, $weightName);
@@ -24,7 +41,8 @@
       height: 10vh;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      z-index: 99999;
+      z-index: 1000;
+      position: relative;
 
       &__menu {
           .icon {
@@ -35,8 +53,43 @@
       }
 
       &__nav {
+          //   display: none;
+          position: fixed;
+          top: 12vh;
+          padding: 4vh;
+          background: lightblue;
+          border-radius: 5px;
+          opacity: 0;
+          transform: translateX(-200%);
+          transition:
+              opacity 0.4s ease-in,
+              transform 0.6s ease-in,
+              background 0.4s ease-in;
+          z-index: 2000;
+          width: 85%;
+
+          &.active {
+              transform: translateX(0%);
+              transition:
+                  opacity 0.2s ease,
+                  background 0.2s ease-out,
+                  transform 0.4s ease-out;
+              opacity: 1;
+          }
+
           &--links {
-              display: none;
+              @include flex(center, center);
+              flex-direction: column;
+
+              li {
+                  padding: 2vh;
+              }
+
+          }
+
+          &--link {
+              font-weight: weight("med");
+              padding: 2vh;
           }
       }
 
@@ -265,5 +318,11 @@
           font-size: 14px;
           font-weight: weight("light");
           padding: 2vh;
+      }
+
+      &__attribution {
+          font-size: 12px;
+          text-align: center;
+          margin-top: 2vh;
       }
   }
