@@ -73,11 +73,12 @@
               text-align: center;
 
               h1 {
-                  font-weight: weight("light");
+                  font-weight: weight("med");
                   text-overflow: ellipsis;
               }
 
               p {
+                  font-weight: weight("light");
                   font-size: 15px;
                   max-width: 90%;
                   margin: auto;
@@ -102,21 +103,61 @@
           }
 
           &:nth-child(2) {
-              margin: 8vh auto;
-              background: lightblue;
+              margin: 12vh auto;
+              background: lightgrey;
               max-width: 100%;
+              display: grid;
+              place-items: center;
+              font-size: 16px;
 
               header {
                   margin: 0 auto;
                   text-align: center;
+                  padding: 8vh 0px;
 
                   h2 {
-                      font-size: 1rem;
+                      font-size: 2rem;
+                      line-height: 40px;
                       font-weight: weight("med");
+                      padding-bottom: 20px;
                   }
 
                   p {
-                      text-overflow: ellipsis;
+                      font-weight: weight("light");
+                      font-size: 16px;
+                      line-height: 22px;
+
+                  }
+              }
+
+              .section {
+                  @include flex(center, center);
+                  flex-direction: column;
+                  padding-bottom: 10vh;
+
+                  &__img {
+                      padding: 10px 0px;
+                  }
+
+                  &__text {
+                      text-align: center;
+                      padding-bottom: 3vh;
+
+                      h2 {
+                          font-weight: weight("med");
+                          font-size: 1rem;
+                          padding: 1.5vh 0px;
+                          line-height: 20px;
+                      }
+
+                      p {
+                          margin: 0px auto;
+                          max-width: 85%;
+                          font-weight: weight("light");
+                          font-size: 14px;
+                          line-height: 20px;
+                      }
+
                   }
               }
           }
