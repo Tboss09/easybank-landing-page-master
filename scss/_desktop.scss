@@ -5,9 +5,10 @@
 
     .main {
         &__article {
+            position: relative;
+
             &:nth-of-type(1) {
                 @include flex(center, center); //   transform: translateY(-17vh);
-                background: lightblue;
                 flex-direction: row-reverse;
                 max-width: 100%;
                 width: 100%;
@@ -29,17 +30,42 @@
                 img {
                     // visibility: hidden;
                     width: 65% !important;
-                    transform: translate(5vw, 15vh); //x,y
+                    transform: translate(6vw, 15vh); //x,y
                 }
             }
 
             // The SVG Image background
 
             // "Next  generation digital banking "
-            &--text {
-                text-align: left;
-                margin-left: 20px;
 
+            &--text {
+                position: relative;
+                top: 12vh;
+                left: 10vw;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+
+                h1 {
+                    overflow-wrap: break-word;
+                    font-weight: weight("med");
+                    max-width: 80%;
+                    margin-left: 20px;
+                }
+
+                p {
+                    font-weight: weight("light");
+                    font-size: 15px;
+                    max-width: 90%;
+                    margin: auto;
+                    line-height: 25px;
+                }
+
+                .button {
+                    margin-left: 20px;
+                }
             }
         }
     }
