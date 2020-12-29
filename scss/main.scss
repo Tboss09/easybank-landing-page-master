@@ -9,7 +9,7 @@
       font-family: 'Public Sans', sans-serif;
       position: relative;
   }
-        
+
   .body__Overlay {
       position: absolute;
       top: 0;
@@ -108,11 +108,11 @@
           z-index: -1000;
           position: relative;
 
-          // .main__article-img
+          // .main__article- (The svg background)
 
           &--img:nth-of-type(1) {
               @include flex(flex-end, center); //   transform: translateY(-17vh);
-              background: url('../images/bg-intro-mobile.svg');
+              background: url('../images/bg-intro-mobile.svg'); //The svg Background
               background-repeat: no-repeat;
               background-position: center bottom;
               background-size: cover;
