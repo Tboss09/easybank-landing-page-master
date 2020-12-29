@@ -35,11 +35,9 @@
 
 
   //   Header
-  header {
-      background: lightgrey;
-  }
 
   .header {
+      background: lightgrey;
       @include flex(center, space-around);
       height: 10vh;
       -webkit-font-smoothing: antialiased;
@@ -189,8 +187,7 @@
               }
 
               .section {
-                  @include flex(center, center);
-                  flex-direction: column;
+                  @include flex(center,space-between);
                   padding-bottom: 5vh;
 
 

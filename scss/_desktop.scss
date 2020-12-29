@@ -6,12 +6,17 @@
     //Header
     header {
         max-width: 100%;
+        background: lightgrey;
+
     }
+
+
+
 
 
     .header {
         height: 12vh;
-        width: 85%;
+        width: 80%;
         margin: 0px auto;
 
         .icon {
@@ -25,8 +30,9 @@
             transform: translateX(0%);
             transition: none;
             z-index: 2000;
-            top: -1vh;
+            top: -0vh;
             background: transparent;
+            font-size: 12px;
 
             // nav-links
             &--links {
@@ -45,6 +51,7 @@
         }
 
         &__btn {
+            font-size: 13px;
             display: block;
             white-space: nowrap;
         }
@@ -125,6 +132,44 @@
                 }
             }
 
+            &:nth-of-type(2) {
+                header {
+                    text-align: left;
+
+                    p {
+                        max-width: 70%;
+                    }
+                }
+
+                .flex {
+                    max-width: 100%;
+                    width: 85%;
+                    margin: 10vh auto 0px auto;
+                    flex-direction: row;
+                    @include flex(center, center);
+
+
+                    .section {
+                        text-align: left;
+                        @include flex(flex-start, space-around);
+                        flex-direction: column;
+
+                        &__img {
+                            padding-left: 2vw;
+                        }
+
+                        &__text {
+                            text-align: left !important;
+
+                            h2 {
+                                padding: 2vh 2vw;
+
+                            }
+                        }
+                    }
+                }
+
+            }
         }
     }
 
