@@ -187,7 +187,8 @@
               }
 
               .section {
-                  @include flex(center,space-between);
+                  @include flex(center, space-around);
+                  flex-direction: column;
                   padding-bottom: 5vh;
 
 
