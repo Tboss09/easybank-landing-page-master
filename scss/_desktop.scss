@@ -1,22 +1,29 @@
 @media screen and (min-width:1000px) {
+    body {
+        overflow-x: hidden;
+    }
+
     .main {
         &__article {
             &:nth-of-type(1) {
-                @include flex(center, space-between); //   transform: translateY(-17vh);
+                @include flex(center, center); //   transform: translateY(-17vh);
                 background: lightblue;
                 flex-direction: row-reverse;
             }
 
             // The SVG Image background
             &--img:nth-of-type(1) {
+                flex-grow: 2;
                 @include flex(center, space-around); //   transform: translateY(-17vh);
-                background: url('../images/bg-intro-mobile.svg'); //The svg Background
+                background: url('../images/bg-intro-desktop.svg'); //The svg Background
                 background-size: cover;
-                transform: translateY(-10vh);
+                transform: translateY(0vh);
+                max-width: 100%;
+                background-position: center top;
 
                 img {
                     width: 100%;
-                    transform: translateY(-4vh);
+                    transform: translate(8vw, -12vh); //x,y
                 }
             }
 
@@ -27,8 +34,6 @@
                 text-align: left;
             }
         }
-
-        // "Next  generation digital banking"
     }
 
 }
