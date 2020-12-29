@@ -35,10 +35,12 @@
 
 
   //   Header
+  header {
+      background: lightgrey;
+  }
 
   .header {
       @include flex(center, space-around);
-      background: lightgrey;
       height: 10vh;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -147,7 +149,7 @@
               margin: 5vh 0px 6vh 0px;
 
               .button {
-          z-index: 1000;
+                  z-index: 1000;
 
                   padding: 12px 24px;
                   border-radius: 50px;
@@ -284,7 +286,7 @@
           padding: 3vh;
           max-width: 100%;
           width: 80%;
-          
+
           @include flex(center, space-around);
       }
 

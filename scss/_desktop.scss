@@ -4,9 +4,15 @@
     }
 
     //Header
-    .header {
+    header {
         max-width: 100%;
-        width: 100%;
+    }
+
+
+    .header {
+        height: 12vh;
+        width: 85%;
+        margin: 0px auto;
 
         .icon {
             display: none;
@@ -40,6 +46,7 @@
 
         &__btn {
             display: block;
+            white-space: nowrap;
         }
     }
 
@@ -64,6 +71,7 @@
                 @include flex(center, space-around); //   transform: translateY(-17vh);
                 background: url('../images/bg-intro-desktop.svg'); //The svg Background
                 background-size: cover;
+                z-index: -2000000;
                 background-position: center center;
                 background-repeat: no-repeat;
                 transform: translate(12vw, -15vh); //x,y
