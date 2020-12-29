@@ -105,8 +105,6 @@
 
       // .main__article
       &__article {
-
-          z-index: -1000;
           position: relative;
 
           // .main__article- (The svg background)
@@ -149,6 +147,8 @@
               margin: 5vh 0px 6vh 0px;
 
               .button {
+          z-index: 1000;
+
                   padding: 12px 24px;
                   border-radius: 50px;
                   font-size: 14px;
@@ -284,6 +284,7 @@
           padding: 3vh;
           max-width: 100%;
           width: 80%;
+          
           @include flex(center, space-around);
       }
 
