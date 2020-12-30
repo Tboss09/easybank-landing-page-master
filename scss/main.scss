@@ -100,6 +100,11 @@
           &--link {
               font-weight: weight("med");
               padding: 2vh;
+              transition: all 0.5s;
+              &:focus {
+                  background: rgba(0, 0, 0, 0.171);
+                  transition: all 0.5s;
+              }
           }
       }
 
@@ -136,8 +141,13 @@
           &--text {
               margin: -22vh auto 0vh auto;
               text-align: center;
-        
-            }
+
+              .button {
+                  &:focus {
+                      background: linear-gradient(to right, colorz("limeGreen"), colorz("brightCyan"));
+
+                  }
+              }
 
               h1 {
                   font-weight: weight("med");
@@ -191,11 +201,10 @@
 
                   h2 {
                       font-size: 1.6rem;
-                      line-height: 40px;
+                      line-height: 30px;
                       font-weight: weight("med");
                       padding-bottom: 20px;
                       color: colorz("darkBlue");
-                      font-weight: weight("med");
                       max-width: 70%;
                       margin: 0 auto;
 
@@ -209,6 +218,7 @@
                       margin: 0 auto;
                       color: colorz("gray")
                   }
+
               }
 
               .section {
@@ -224,10 +234,12 @@
                           font-weight: weight("med");
                           font-size: 1rem;
                           padding: 2vh 0px;
+                          color: colorz("darkBlue");
                           line-height: 20px;
                       }
 
                       p {
+                          color: colorz("gray");
                           margin: 0px auto;
                           max-width: 85%;
                           font-weight: weight("light");
@@ -271,6 +283,7 @@
                   &__text--two {
                       margin: 0px auto;
                       width: 74%;
+                      color: colorz("gray");
 
                       h4 {
                           padding: 0vh 0px 2vh 0px;
@@ -284,8 +297,11 @@
                               font-size: 1rem;
                               line-height: 24px;
                               padding-bottom: 1vh;
+                              color: colorz("darkBlue") !important;
+
                           }
 
+                          color: colorz("gray") !important;
                           font-size: 13px;
                           line-height:18px;
                           font-weight: weight("light");
@@ -354,12 +370,16 @@
           margin: 6vh;
 
           .button {
-              background: linear-gradient(to right, colorz("limeGreen"), colorz("brightCyan"));
+              background: linear-gradient(to right, #31d35c85, #2bb7da99);
               padding: 15px 40px;
               border-radius: 50px;
               font-size: 14px;
               text-align: center;
               color: colorz("white");
+
+              &:hover {
+                  background: linear-gradient(to right, colorz("limeGreen"), colorz("brightCyan"));
+              }
           }
       }
 
