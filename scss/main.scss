@@ -134,19 +134,24 @@
 
           // .main__article-text
           &--text {
-              margin-top: -22vh;
+              margin: -22vh auto 0vh auto;
               text-align: center;
 
               h1 {
                   font-weight: weight("med");
                   text-overflow: ellipsis;
+                  max-width: 80%;
+                  margin: 5vh auto;
+                  color: color("darkBlue");
+                  font-weight: weight("light");
               }
 
               p {
                   font-weight: weight("light");
+                  color: color("gray");
                   font-size: 15px;
                   max-width: 90%;
-                  margin: auto;
+                  margin: 0 auto;
                   line-height: 22px;
               }
           }
@@ -174,10 +179,10 @@
               display: grid;
               place-items: center;
               font-size: 16px;
-              background: green !important;
+              background: map-get($pri-color,"limeGreen" );
               
               header {
-                  background: color();
+                  background: map-get($pri-color,"limeGreen" );
                   margin: 0 auto;
                   text-align: center;
                   padding: 8vh 0px;
@@ -187,6 +192,11 @@
                       line-height: 40px;
                       font-weight: weight("med");
                       padding-bottom: 20px;
+                      color: color("darkBlue");
+                      font-weight: weight("med");
+                      max-width: 70%;
+                      margin: 0 auto;
+
                   }
 
                   p {
@@ -195,6 +205,7 @@
                       line-height: 22px;
                       max-width: 90%;
                       margin: 0 auto;
+                      color: color("gray")
                   }
               }
 
@@ -286,11 +297,12 @@
   //   Footer
 
   .footer {
+      background-color: hsl(233, 26%, 24%);
       margin-top: 15vh;
       padding: 6vh;
       display: grid;
       place-items: center;
-      background: lightgrey;
+      //   background: lightgrey;
 
       &__logo {
           margin-left: 60px;
@@ -326,9 +338,10 @@
 
           //About us,Contact,Blog,Careers, Support and privacy policy
           &--link {
-              font-weight: weight("med");
+              font-weight: weight("light");
               padding: 1vh;
               font-size: 14px;
+              color: white;
           }
       }
 
@@ -337,15 +350,18 @@
           margin: 6vh;
 
           .button {
+              background: linear-gradient(to right, map-get($pri-color, "limeGreen"),
+                      map-get($pri-color, "brightCyan"));
               padding: 15px 40px;
               border-radius: 50px;
               font-size: 14px;
               text-align: center;
-              background: lightblue;
-          }
-      }
-
-      p {
+              color: color("white");
+            }
+        }
+        
+        p {
+          color: color("white");
           font-size: 14px;
           font-weight: weight("light");
           padding: 2vh;
