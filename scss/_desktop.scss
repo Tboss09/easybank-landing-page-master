@@ -7,7 +7,6 @@
     header {
         max-width: 100% !important;
         width: 100% !important;
-        background: lightgrey;
 
     }
 
@@ -19,7 +18,7 @@
         height: 12vh;
         width: 80%;
         margin: 0px auto;
-
+box-shadow: none;
         .icon {
             display: none;
         }
@@ -138,7 +137,6 @@
 
             //Why choose EazyBank
             &:nth-of-type(2) {
-                background: lightblue !important;
                 max-width: 100%;
                 width: 100%;
                 padding: 40px 50px;
@@ -194,6 +192,7 @@
                 margin: 0 auto;
 
                 header {
+                    background: transparent;
                     margin-left: 1.5vw;
                     background: none;
 
@@ -211,25 +210,44 @@
         }
     }
 
-    //Footer
+    //Footer..
     .footer {
-        @include flex(center, space-between);
-        max-width: 100%;
+        grid-auto-flow: column;
+        grid-template-columns: 200px;
+        align-items: center;
+
+
+        &__logo {
+            margin-left: 4vw;
+            padding: 3vh 0vw;
+        }
 
         &__nav-links {
             column-count: 2;
-            column-gap: 20px;
-            list-style-type: none;
-        }
-
-        &__flex {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
+            font-size: 14px;
 
             li {
-                white-space: nowrap;
+                text-align: left;
             }
+        }
+
+        &__socialIcons {
+            width: 100%;
+            margin-left: 3vw;
+
+            &--ul {
+                display: flex;
+
+                li {
+                    margin: 0.6vw;
+                }
+            }
+
+        }
+
+        .requestBtn {
+            position: relative;
+            left: 7vw;
         }
     }
 }

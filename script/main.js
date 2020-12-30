@@ -16,7 +16,6 @@
         // When it is clicked at first
         phoneImage.style.opacity = 0;
         phoneImage.style.transition = "0.3s ease-in-out opacity";
-        console.log(phoneImage);
         navMenu.classList.toggle("active");
 
 
