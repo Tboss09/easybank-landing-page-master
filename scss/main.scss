@@ -288,21 +288,23 @@
           @include flex(center, space-around);
       }
 
+      //.footer__nav
       &__nav {
           @include flex(center, center);
 
           li {
               text-align: center;
               padding: 2vh;
-
           }
 
+          //About us,Contact,Blog,Careers, Support and privacy policy
           &--link {
               font-weight: weight("med");
               padding: 2vh;
           }
       }
 
+      //Request Invite
       &__btn {
           margin: 6vh;
 

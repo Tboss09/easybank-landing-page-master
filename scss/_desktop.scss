@@ -90,8 +90,8 @@
                 width: 150vw;
                 max-width: 100%;
 
+                //Phone image
                 img {
-                    // visibility: hidden;
                     width: 85% !important;
                     transform: translate(2vw, 25vh); //x,y
                 }
@@ -195,6 +195,7 @@
 
                 header {
                     margin-left: 1.5vw;
+                    background: none;
 
                     h3 {
                         text-align: left;
@@ -210,4 +211,25 @@
         }
     }
 
+    //Footer
+    .footer {
+        @include flex(center, space-between);
+        max-width: 100%;
+
+        &__nav-links {
+            column-count: 2;
+            column-gap: 20px;
+            list-style-type: none;
+        }
+
+        &__flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            li {
+                white-space: nowrap;
+            }
+        }
+    }
 }
