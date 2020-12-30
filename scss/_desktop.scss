@@ -194,6 +194,7 @@
                 margin: 0 auto;
 
                 header {
+                    background: transparent;
                     margin-left: 1.5vw;
 
                     h3 {
@@ -210,4 +211,23 @@
         }
     }
 
+    //Footer..
+    .footer {
+        grid-auto-flow: column;
+        grid-template-columns: minmax(200px, 200px);
+        align-items: center;
+        &__nav-links {
+            column-count: 2;
+            font-size: 14px;
+
+            li {
+                text-align: left;
+            }
+        }
+
+        .requestBtn {
+            position: relative;
+            left: 8vw;
+        }
+    }
 }
