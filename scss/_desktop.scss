@@ -91,6 +91,7 @@
             text-align: center;
             background: linear-gradient(to right, #31d35c85, #2bb7da99);
             transition: 0.5s background ease-in;
+
             &:hover {
                 transition: 0.5s background ease-in;
                 background: linear-gradient(to right, colorz("limeGreen"), colorz("brightCyan"));
@@ -178,6 +179,14 @@
                 .button {
                     margin-left: 20px;
                     cursor: pointer !important;
+                    background: linear-gradient(to right, #31d35c85, #2bb7da99);
+                    transition: 0.5s background ease-in;
+
+                    &:hover {
+                        transition: 0.5s background ease-in;
+                        background: linear-gradient(to right, colorz("limeGreen"), colorz("brightCyan"));
+
+                    }
                 }
             }
 
@@ -211,14 +220,16 @@
                 }
 
                 .flex {
-                    
+
                     max-width: 100%;
                     width: 100%;
                     margin: 5vh auto 0px auto;
                     flex-direction: row;
                     @include flex(center, center);
 
-
+                        &__Inner{
+                            display: flex;
+                        }
                     .section {
                         text-align: left;
                         @include flex(flex-start, space-around);
@@ -230,6 +241,7 @@
 
                         &__text {
                             text-align: left !important;
+
                             h2 {
                                 padding: 2vh 2vw;
 
@@ -237,9 +249,9 @@
                         }
                     }
                 }
-                
+
             }
-            
+
             //Latest Articles
             &:nth-of-type(3) {
                 z-index: -2000;
@@ -259,9 +271,12 @@
                 }
 
                 .flexThree {
-                    
+
                     display: flex;
                     margin: 0 auto;
+                    &__inner{
+                        display: flex;
+                    }
                 }
             }
         }
