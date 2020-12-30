@@ -6,7 +6,7 @@
     //Header
     header {
         max-width: 100% !important;
-    width: 100% !important;
+        width: 100% !important;
         background: lightgrey;
 
     }
@@ -63,9 +63,12 @@
 
 
     .main {
+
+        //main__article
         &__article {
             position: relative;
 
+            //main__article(1)
             &:nth-of-type(1) {
                 @include flex(center, center); //   transform: translateY(-17vh);
                 flex-direction: row-reverse;
@@ -83,14 +86,14 @@
                 background-position: center center;
                 background-repeat: no-repeat;
                 transform: translate(12vw, -15vh); //x,y
-                height: 90vh;
-                width: 140vw;
+                height: 95vh;
+                width: 150vw;
                 max-width: 100%;
 
                 img {
                     // visibility: hidden;
-                    width: 65% !important;
-                    transform: translate(6vw, 15vh); //x,y
+                    width: 85% !important;
+                    transform: translate(2vw, 25vh); //x,y
                 }
             }
 
@@ -133,18 +136,29 @@
                 }
             }
 
+            //Why choose EazyBank
             &:nth-of-type(2) {
+                background: lightblue !important;
+                max-width: 100%;
+                width: 100%;
+                padding: 40px 50px;
+                z-index: -20000000000 !important;
+
                 header {
+                    background: transparent;
+                    margin: 0 auto;
                     text-align: left;
 
+                    // We leverage Open Banking to turn your bank account into your finacial hub
                     p {
-                        max-width: 70%;
+                        max-width: 50%;
+                        line-height: 28px;
                     }
                 }
 
                 .flex {
                     max-width: 100%;
-                    width: 85%;
+                    width: 100%;
                     margin: 10vh auto 0px auto;
                     flex-direction: row;
                     @include flex(center, center);
@@ -170,6 +184,28 @@
                     }
                 }
 
+            }
+
+            //Latest Articles
+            &:nth-of-type(3) {
+                z-index: -2000;
+                max-width: 100%;
+                width: 85%;
+                margin: 0 auto;
+
+                header {
+                    margin-left: 1.5vw;
+
+                    h3 {
+                        text-align: left;
+
+                    }
+                }
+
+                .flexThree {
+                    display: flex;
+                    margin: 0 auto;
+                }
             }
         }
     }
