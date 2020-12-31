@@ -40,3 +40,6 @@
         return;
     }
 })();
+const allLinkk = document.querySelectorAll("a");
+
+const body = document.querySelector("body");

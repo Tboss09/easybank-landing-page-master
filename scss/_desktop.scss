@@ -227,9 +227,10 @@
                     flex-direction: row;
                     @include flex(center, center);
 
-                        &__Inner{
-                            display: flex;
-                        }
+                    &__Inner {
+                        display: flex;
+                    }
+
                     .section {
                         text-align: left;
                         @include flex(flex-start, space-around);
@@ -274,7 +275,8 @@
 
                     display: flex;
                     margin: 0 auto;
-                    &__inner{
+
+                    &__inner {
                         display: flex;
                     }
                 }
@@ -303,6 +305,16 @@
             }
         }
 
+        &__nav--link {
+            color: white;
+            transition: 0.3s color;
+
+            &:hover {
+                transition: 0.3s color;
+                color: colorz("limeGreen");
+            }
+        }
+
         &__socialIcons {
             width: 100%;
             margin-left: 3vw;
@@ -312,6 +324,26 @@
 
                 li {
                     margin: 0.6vw;
+                    
+                    a,svg {
+                        width:30px;
+                        height: 30px;
+                        
+                        .fill {
+                            transition: fill 0.2s;
+                            fill: white;
+                            transform: scale(0.90);
+                            
+                            &:hover {
+                                transform: scale(1);
+                                transition: fill 0.2s;
+                                fill: hsl(136, 65%, 51%);
+
+                            }
+
+
+                        }
+                    }
                 }
             }
 
